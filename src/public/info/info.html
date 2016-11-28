@@ -1,0 +1,25 @@
+
+
+  <div ng-if = "inf.registrado">
+    Your information <br>
+    Name: {{ inf.name}} <br>
+    Last Name: {{ inf.lastName}} <br>
+    Email: {{ inf.email}} <br>
+    Phone: {{ inf.phone }}<br>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>Your favourite dish</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{inf.basePath}}/images/{{inf.short_name}}.jpg" alt="{{inf.dish}}">
+        </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{inf.dish}}</h3>
+        <p class="menu-item-details">{{inf.dishDescription}}</p>
+      </div>
+    </div>
+    <hr class="visible-xs">
+  </div>
+</div>
+<div id="info" ng-if = "!inf.registrado" >
+  Not Signed Up Yet. <a ui-sref="form">Sign up Now!</a>
+</div>
